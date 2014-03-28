@@ -45,6 +45,8 @@ Bundle "pangloss/vim-javascript"
 Bundle 'scrooloose/nerdtree'
 Bundle 'ervandew/supertab'
 Bundle 'elzr/vim-json'
+Bundle 'tpope/vim-classpath'
+Bundle 'tpope/vim-fireplace'
 " vim-scripts repos
 Bundle 'L9'
 " non github repos
@@ -66,7 +68,7 @@ nnoremap <silent><C-l> :tabn<CR>
 " NERDTree {
 nnoremap <silent><leader>n :NERDTree<CR>
 nnoremap <silent><leader>t :NERDTreeToggle<CR>
-nnoremap <silent><C-h> :NERDTreeTabsToggle<CR>
+nnoremap <silent><C-h> :NERDTreeFocus<CR>
 "}
 let g:Powerline_symbols = 'fancy'
 nnoremap <silent><leader>nt :NumbersToggle<CR>

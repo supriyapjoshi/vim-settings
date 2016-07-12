@@ -20,7 +20,6 @@ else           " On mac and Windows, use * register for copy-paste
 	set clipboard=unnamed
 endif
 
- color desert256
 set noshowmode
 
 highlight clear SignColumn      " SignColumn should match background for
@@ -61,6 +60,9 @@ set shiftwidth=2 tabstop=2 softtabstop=2
 set expandtab                   " Tabs are spaces, not tabs
 set matchpairs+=<:>             " Match, to be used with %
 set comments=sl:/*,mb:*,elx:*/  " auto format comment blocks
+set t_Co=256
+set tw=80
+colorscheme desert256
 autocmd FileType python setlocal shiftwidth=4 tabstop=4 softtabstop=4
 autocmd FileType c,cpp,java,go,php,javascript,ruby,python,twig,xml,yml autocmd BufWritePre <buffer> call StripTrailingWhitespace()
 
@@ -77,7 +79,7 @@ nnoremap <leader>b :CtrlPBuffer<CR>
 nnoremap <leader>n :tabn<CR>
 nnoremap <leader>p :tabp<CR>
 let g:ctrlp_custom_ignore = {
-      \ 'dir':  '\.git$\|\.hg$\|\.svn$',
+      \ 'dir':  '\.git$\|\.hg$\|\.svn$\|dist$\|target$\|node_modules$\|bower_components$',
       \ 'file': '\.exe$\|\.so$\|\.dll$\|\.pyc$' }
 "}
 function! StripTrailingWhitespace()
